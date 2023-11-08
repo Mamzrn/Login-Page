@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #adminButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #adminButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Main Page</h1>
+    <button id="adminButton" style="display: none;" onclick="redirectToAdmin()">Go to Admin Page</button>
+
+    <script>
+        var isAdmin = true; // يمكنك تغيير قيمة هذا المتغير وفقًا لحالة المستخدم
+
+        if (isAdmin) {
+            var adminButton = document.getElementById("adminButton");
+            adminButton.style.display = "block";
+        }
+
+        function redirectToAdmin() {
+            window.location.href = "Admin.html";
+        }
+    </script>
+</body>
+</html>
